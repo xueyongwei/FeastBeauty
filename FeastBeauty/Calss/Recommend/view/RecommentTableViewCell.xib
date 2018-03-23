@@ -19,20 +19,37 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="546.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qCn-g6-LkV">
+                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8d6-NQ-s2e">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="546.5"/>
-                        <gestureRecognizers/>
-                    </imageView>
+                        <subviews>
+                            <imageView contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qCn-g6-LkV">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="546.5"/>
+                                <gestureRecognizers/>
+                            </imageView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="qCn-g6-LkV" firstAttribute="top" secondItem="8d6-NQ-s2e" secondAttribute="top" id="4Mw-Ql-yEN"/>
+                            <constraint firstItem="qCn-g6-LkV" firstAttribute="leading" secondItem="8d6-NQ-s2e" secondAttribute="leading" id="OP8-uv-dzc"/>
+                            <constraint firstAttribute="trailing" secondItem="qCn-g6-LkV" secondAttribute="trailing" id="TFw-0e-weh"/>
+                            <constraint firstItem="qCn-g6-LkV" firstAttribute="height" secondItem="8d6-NQ-s2e" secondAttribute="height" id="USF-rm-xct"/>
+                            <constraint firstItem="qCn-g6-LkV" firstAttribute="width" secondItem="8d6-NQ-s2e" secondAttribute="width" id="bJf-gA-AIL"/>
+                            <constraint firstAttribute="bottom" secondItem="qCn-g6-LkV" secondAttribute="bottom" id="g5S-DX-b74"/>
+                        </constraints>
+                    </scrollView>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="qCn-g6-LkV" secondAttribute="trailing" id="GGp-FY-jHQ"/>
-                    <constraint firstItem="qCn-g6-LkV" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="IaO-Ms-c8A"/>
-                    <constraint firstAttribute="bottom" secondItem="qCn-g6-LkV" secondAttribute="bottom" id="QXy-m9-weO"/>
-                    <constraint firstItem="qCn-g6-LkV" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="hpc-39-Fzh"/>
+                    <constraint firstItem="8d6-NQ-s2e" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Wxo-i5-uHC"/>
+                    <constraint firstItem="8d6-NQ-s2e" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="aPm-ut-Iyy"/>
+                    <constraint firstAttribute="bottom" secondItem="8d6-NQ-s2e" secondAttribute="bottom" id="cEe-7Q-jWY"/>
+                    <constraint firstAttribute="trailing" secondItem="8d6-NQ-s2e" secondAttribute="trailing" id="vO8-qr-Mtc"/>
                 </constraints>
             </tableViewCellContentView>
             <gestureRecognizers/>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="contentScrollView" destination="8d6-NQ-s2e" id="SLa-Ae-eE1"/>
+                <outlet property="imgView" destination="qCn-g6-LkV" id="cNc-fV-Fx3"/>
+            </connections>
             <point key="canvasLocation" x="34" y="-22.5"/>
         </tableViewCell>
     </objects>

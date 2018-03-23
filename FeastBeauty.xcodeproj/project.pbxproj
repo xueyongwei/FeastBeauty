@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		0D94507D41A94847A6B497CD /* Pods_FeastBeauty.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92572B8E4D83750C1B14CB7B /* Pods_FeastBeauty.framework */; };
+		475780162064AA15009E6F47 /* XYWAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475780152064AA15009E6F47 /* XYWAPI.swift */; };
+		475780182064B440009E6F47 /* Mappable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475780172064B43F009E6F47 /* Mappable.swift */; };
+		4757801C2064B819009E6F47 /* ImageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4757801B2064B819009E6F47 /* ImageModel.m */; };
+		4757801E2064CC63009E6F47 /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4757801D2064CC63009E6F47 /* Board.swift */; };
+		475780292064F7A3009E6F47 /* YPDouYinLikeAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 475780282064F7A3009E6F47 /* YPDouYinLikeAnimation.m */; };
+		4757802C2064F7B1009E6F47 /* yp_video_like@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4757802A2064F7B1009E6F47 /* yp_video_like@2x.png */; };
+		4757802D2064F7B1009E6F47 /* yp_video_like@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4757802B2064F7B1009E6F47 /* yp_video_like@3x.png */; };
 		475C92F12063917E006384DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475C92F02063917E006384DE /* AppDelegate.swift */; };
 		475C92F32063917E006384DE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475C92F22063917E006384DE /* ViewController.swift */; };
 		475C92F62063917E006384DE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 475C92F42063917E006384DE /* Main.storyboard */; };
@@ -23,11 +30,20 @@
 		475C93232063B691006384DE /* XYWAPICenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475C93212063B691006384DE /* XYWAPICenter.swift */; };
 		475C93242063B691006384DE /* XYWNetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475C93222063B691006384DE /* XYWNetworkRequest.swift */; };
 		475C93272063B6A8006384DE /* XYWValidate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475C93262063B6A8006384DE /* XYWValidate.swift */; };
-		475C932B2063C2D7006384DE /* BordData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475C932A2063C2D7006384DE /* BordData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		38EC66FDE3AE0E224911A728 /* Pods-FeastBeauty.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FeastBeauty.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FeastBeauty/Pods-FeastBeauty.debug.xcconfig"; sourceTree = "<group>"; };
+		475780152064AA15009E6F47 /* XYWAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XYWAPI.swift; sourceTree = "<group>"; };
+		475780172064B43F009E6F47 /* Mappable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mappable.swift; sourceTree = "<group>"; };
+		4757801A2064B819009E6F47 /* ImageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageModel.h; sourceTree = "<group>"; };
+		4757801B2064B819009E6F47 /* ImageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageModel.m; sourceTree = "<group>"; };
+		4757801D2064CC63009E6F47 /* Board.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
+		475780272064F7A3009E6F47 /* YPDouYinLikeAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YPDouYinLikeAnimation.h; sourceTree = "<group>"; };
+		475780282064F7A3009E6F47 /* YPDouYinLikeAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YPDouYinLikeAnimation.m; sourceTree = "<group>"; };
+		4757802A2064F7B1009E6F47 /* yp_video_like@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "yp_video_like@2x.png"; sourceTree = "<group>"; };
+		4757802B2064F7B1009E6F47 /* yp_video_like@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "yp_video_like@3x.png"; sourceTree = "<group>"; };
+		4757802F2064F878009E6F47 /* FeastBeauty-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FeastBeauty-Bridging-Header.h"; sourceTree = "<group>"; };
 		475C92ED2063917E006384DE /* FeastBeauty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FeastBeauty.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		475C92F02063917E006384DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		475C92F22063917E006384DE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -45,7 +61,6 @@
 		475C93212063B691006384DE /* XYWAPICenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XYWAPICenter.swift; sourceTree = "<group>"; };
 		475C93222063B691006384DE /* XYWNetworkRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XYWNetworkRequest.swift; sourceTree = "<group>"; };
 		475C93262063B6A8006384DE /* XYWValidate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XYWValidate.swift; sourceTree = "<group>"; };
-		475C932A2063C2D7006384DE /* BordData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BordData.swift; sourceTree = "<group>"; };
 		6201AE17C0231B882B318497 /* Pods-FeastBeauty.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FeastBeauty.release.xcconfig"; path = "Pods/Target Support Files/Pods-FeastBeauty/Pods-FeastBeauty.release.xcconfig"; sourceTree = "<group>"; };
 		92572B8E4D83750C1B14CB7B /* Pods_FeastBeauty.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FeastBeauty.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -62,6 +77,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		475780262064F7A3009E6F47 /* YPDouYinLikeAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				475780272064F7A3009E6F47 /* YPDouYinLikeAnimation.h */,
+				475780282064F7A3009E6F47 /* YPDouYinLikeAnimation.m */,
+				4757802A2064F7B1009E6F47 /* yp_video_like@2x.png */,
+				4757802B2064F7B1009E6F47 /* yp_video_like@3x.png */,
+			);
+			path = YPDouYinLikeAnimation;
+			sourceTree = "<group>";
+		};
 		475C92E42063917E006384DE = {
 			isa = PBXGroup;
 			children = (
@@ -94,6 +120,7 @@
 				475C92F42063917E006384DE /* Main.storyboard */,
 				475C92F72063917E006384DE /* Assets.xcassets */,
 				475C92F92063917E006384DE /* LaunchScreen.storyboard */,
+				4757802F2064F878009E6F47 /* FeastBeauty-Bridging-Header.h */,
 				475C92FC2063917E006384DE /* Info.plist */,
 			);
 			path = FeastBeauty;
@@ -112,6 +139,7 @@
 		475C9303206391F9006384DE /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				475780262064F7A3009E6F47 /* YPDouYinLikeAnimation */,
 				475C93252063B6A8006384DE /* XYWValidate */,
 				475C93202063B691006384DE /* XYWNetworkKit */,
 			);
@@ -178,7 +206,9 @@
 		475C931D2063ACBF006384DE /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				475C932A2063C2D7006384DE /* BordData.swift */,
+				4757801A2064B819009E6F47 /* ImageModel.h */,
+				4757801B2064B819009E6F47 /* ImageModel.m */,
+				4757801D2064CC63009E6F47 /* Board.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -187,7 +217,9 @@
 			isa = PBXGroup;
 			children = (
 				475C93212063B691006384DE /* XYWAPICenter.swift */,
+				475780152064AA15009E6F47 /* XYWAPI.swift */,
 				475C93222063B691006384DE /* XYWNetworkRequest.swift */,
+				475780172064B43F009E6F47 /* Mappable.swift */,
 			);
 			path = XYWNetworkKit;
 			sourceTree = "<group>";
@@ -252,6 +284,7 @@
 				TargetAttributes = {
 					475C92EC2063917E006384DE = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -280,9 +313,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				475C931C206399BF006384DE /* RecommentTableViewCell.xib in Resources */,
+				4757802C2064F7B1009E6F47 /* yp_video_like@2x.png in Resources */,
 				475C92FB2063917E006384DE /* LaunchScreen.storyboard in Resources */,
 				475C92F82063917E006384DE /* Assets.xcassets in Resources */,
 				475C92F62063917E006384DE /* Main.storyboard in Resources */,
+				4757802D2064F7B1009E6F47 /* yp_video_like@3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,6 +365,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-FeastBeauty/Pods-FeastBeauty-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/CodableAlamofire/CodableAlamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/YYKit/YYKit.framework",
@@ -338,6 +374,7 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CodableAlamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYKit.framework",
@@ -356,13 +393,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				475C930E2063929F006384DE /* CollectionListViewController.swift in Sources */,
+				475780182064B440009E6F47 /* Mappable.swift in Sources */,
+				4757801E2064CC63009E6F47 /* Board.swift in Sources */,
 				475C93242063B691006384DE /* XYWNetworkRequest.swift in Sources */,
-				475C932B2063C2D7006384DE /* BordData.swift in Sources */,
 				475C931720639779006384DE /* RootTabBarController.swift in Sources */,
 				475C9310206392A7006384DE /* UserViewController.swift in Sources */,
 				475C9313206392E1006384DE /* BaseNavigationController.swift in Sources */,
+				475780162064AA15009E6F47 /* XYWAPI.swift in Sources */,
+				475780292064F7A3009E6F47 /* YPDouYinLikeAnimation.m in Sources */,
 				475C93232063B691006384DE /* XYWAPICenter.swift in Sources */,
 				475C931B206399BF006384DE /* RecommentTableViewCell.swift in Sources */,
+				4757801C2064B819009E6F47 /* ImageModel.m in Sources */,
 				475C930C20639294006384DE /* RecommendListViewController.swift in Sources */,
 				475C92F32063917E006384DE /* ViewController.swift in Sources */,
 				475C92F12063917E006384DE /* AppDelegate.swift in Sources */,
@@ -504,6 +545,7 @@
 			baseConfigurationReference = 38EC66FDE3AE0E224911A728 /* Pods-FeastBeauty.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 42FQR4EVHR;
 				INFOPLIST_FILE = FeastBeauty/Info.plist;
@@ -511,6 +553,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = xyw.ios.FeastBeauty;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "FeastBeauty/FeastBeauty-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -521,6 +565,7 @@
 			baseConfigurationReference = 6201AE17C0231B882B318497 /* Pods-FeastBeauty.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 42FQR4EVHR;
 				INFOPLIST_FILE = FeastBeauty/Info.plist;
@@ -528,6 +573,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = xyw.ios.FeastBeauty;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "FeastBeauty/FeastBeauty-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

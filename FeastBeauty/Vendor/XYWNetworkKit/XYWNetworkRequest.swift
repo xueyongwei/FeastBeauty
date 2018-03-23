@@ -10,18 +10,7 @@ import UIKit
 import Alamofire
 class XYWNetworkRequest: NSObject {
     
-    
-//    /// 请求的url地址串
-//    var url:String = ""
-//
-//    /// 请求需要的参数
-//    var params:Dictionary<String,Any>?
-//
-//    /// 请求头
-//    var headers:HTTPHeaders?
-    
-    
-    typealias CompletionHandle = (Dictionary<String,Any>)->()
+    typealias CompletionHandle = (Any)->()
     typealias FailedHandle = (Error)->()
     
     //这个方法封装了第三方的库
@@ -35,17 +24,18 @@ class XYWNetworkRequest: NSObject {
             
             return
         }
-        
+       
         Alamofire.request(url, method: method, parameters: parameters, encoding: URLEncoding.default, headers: headers).responseJSON { (response) in
             switch response.result {
             case .success(let json):
-                if let data = json as? Dictionary<String, Any> {
-                    sucessHandle(data)
-                }else{
-                    debugPrint("返回的数据类型有误！-\(urlStr)")
-                    failedHandle(AFError.responseValidationFailed(reason: AFError.ResponseValidationFailureReason.missingContentType(acceptableContentTypes: ["Dictionary"])))
-                    
-                }
+                sucessHandle(json)
+//                if let data = json as? Dictionary<String, Any> {
+//                    sucessHandle(data)
+//                }else{
+//                    debugPrint("返回的数据类型有误！-\(urlStr)")
+//                    failedHandle(AFError.responseValidationFailed(reason: AFError.ResponseValidationFailureReason.missingContentType(acceptableContentTypes: ["Dictionary"])))
+//
+//                }
                 
             case .failure(let error):
                 if let error = error as? AFError {
@@ -91,93 +81,30 @@ class XYWNetworkRequest: NSObject {
         }
     }
     
-//    func getAsyncWithCompleteHandle(_ handle: @escaping CompletionHandle,failedHandle:@escaping FailedHandle) {
-//
-//        asyncRequest(sucessHandle: { (result) in
-//            print(result)
-//            handle(result)
-//        }) { (error) in
-//            failedHandle(error)
-//            print(error.localizedDescription)
-//        }
-//
-//    }
-//
-//    func postAsyncWithCompleteHandle(_ handle: @escaping CompletionHandle) {
-//
-//    }
-    
-    
-//    fileprivate func asyncRequest(isPost:Bool = false,sucessHandle:@escaping CompletionHandle,failedHandle:@escaping FailedHandle) {
-//
-//        var method = HTTPMethod.get
-//        if isPost {method = .post}
-//
-//        Alamofire.request(url, method: method, parameters: params, encoding: URLEncoding.default, headers: headers).responseJSON { (response) in
-//            switch response.result {
-//            case .success(let json):
-//                if let data = json as? Dictionary<String, Any> {
-//                    sucessHandle(data)
-//                }else{
-//                    debugPrint("返回的数据类型有误！")
-//                    failedHandle(AFError.responseValidationFailed(reason: AFError.ResponseValidationFailureReason.missingContentType(acceptableContentTypes: ["Dictionary"])))
-//
-//                }
-//
-//            case .failure(let error):
-//                if let error = error as? AFError {
-//                    switch error {
-//                    case .invalidURL(let url):
-//                        print("Invalid URL: \(url) - \(error.localizedDescription)")
-//                    case .parameterEncodingFailed(let reason):
-//                        print("Parameter encoding failed: \(error.localizedDescription)")
-//                        print("Failure Reason: \(reason)")
-//                    case .multipartEncodingFailed(let reason):
-//                        print("Multipart encoding failed: \(error.localizedDescription)")
-//                        print("Failure Reason: \(reason)")
-//                    case .responseValidationFailed(let reason):
-//                        print("Response validation failed: \(error.localizedDescription)")
-//                        print("Failure Reason: \(reason)")
-//
-//                        switch reason {
-//                        case .dataFileNil, .dataFileReadFailed:
-//                            print("Downloaded file could not be read")
-//                        case .missingContentType(let acceptableContentTypes):
-//                            print("Content Type Missing: \(acceptableContentTypes)")
-//                        case .unacceptableContentType(let acceptableContentTypes, let responseContentType):
-//                            print("Response content type: \(responseContentType) was unacceptable: \(acceptableContentTypes)")
-//                        case .unacceptableStatusCode(let code):
-//                            print("Response status code was unacceptable: \(code)")
-//                        }
-//                    case .responseSerializationFailed(let reason):
-//                        print("Response serialization failed: \(error.localizedDescription)")
-//                        print("Failure Reason: \(reason)")
-//                    }
-//
-//                    print("Underlying error: \(String(describing: error.underlyingError))")
-//                } else if let error = error as? URLError {
-//                    print("URLError occurred: \(error)")
-//                } else {
-//                    print("Unknown error: \(error)")
-//                }
-//                failedHandle(error)
-//
-//            }
-//        }
-//    }
     
 }
+
+
 
 //MARK: - 返回对应的请求实例对象
 extension XYWNetworkRequest {
     
-    static func  getRecommendList(param:Parameters?) {
-        let urlStr = "aaaa"
+    static func  getRecommendList(param:Parameters?,completion:@escaping CompletionHandle,failed:@escaping FailedHandle){
         
-        self.asyncRequest(urlStr: urlStr, parameters: param, headers: nil, method: .get, sucessHandle: { (resule) in
-            BordData = JSONDecoder().decode(Decodable., from: <#T##Data#>)
+        var urlStr = XYWAPICenter.getRecomendListUrl()
+        
+        if let pa = param, let max = pa["max"] as? Int {
+            if max > 0 && max < Int.max{
+                urlStr.append("&max=\(max)")
+            }
+            
+        }
+        
+        self.asyncRequest(urlStr: urlStr, parameters: nil, headers: nil, method: .get, sucessHandle: { (result) in
+            completion(result)
         }) { (error) in
             
+            failed(error)
         }
     }
     

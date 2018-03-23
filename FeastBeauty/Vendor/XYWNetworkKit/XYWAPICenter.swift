@@ -28,6 +28,10 @@ class XYWAPICenter: NSObject {
     }
     
     
+    //MARK: - FeastBeauty的接口
+    static func getRecomendListUrl() -> String {
+        return "http://api.huaban.com/boards/28187419/pins/?limit=20"
+    }
     
 }
 

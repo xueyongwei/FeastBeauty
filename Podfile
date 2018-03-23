@@ -6,7 +6,7 @@ use_frameworks!
 
 #网络库
 pod 'Alamofire', '~> 4.7'
-
+pod 'CodableAlamofire'
 #提供更多功能
 pod 'YYKit', '0.9.6'
 
